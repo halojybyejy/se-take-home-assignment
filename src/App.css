@@ -1,102 +1,151 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+	height: 40vmin;
+	pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
 .App-link {
-  color: #61dafb;
+	color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
 }
 
+html, body, #root {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.app-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
 
 .header {
-  width: 100%;
-  border-bottom: 1px solid #EDEDED;
-  background-color: white;
-  font-weight: bold;
-  padding: 15px 23px;
-  font-size: 18px;
-  height: 3vh;
+	border-bottom: 1px solid #EDEDED;
+	background-color: white;
+	font-weight: bold;
+	padding: 15px 23px;
+	font-size: 18px;
+	height: 3%;
+    min-height: 25px;
+    max-height: 30px;
 }
 
 .content {
-  padding:  0px 20px 0px 20px;
-  background-color: #fafafa;
+	height: 85%;
+	padding:  0px 20px 0px 20px;
+	background-color: #fafafa;
 }
 
 .control-panel {
-  display: flex;
-  justify-content: flex-start; 
-  align-items: center; 
-  height: 8vh;
+	display: flex;
+	justify-content: flex-start; 
+	align-items: center; 
+	height: 10%;
+	padding: 0px 10px;
 }
 
 .control-panel-item {
-  background-color: white;
-  padding: 10px;
-  border: 1px solid #EDEDED;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+	background-color: white;
+	padding: 10px;
+	border: 1px solid #EDEDED;
+	margin-right: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
 }
 
 .control-panel-item:hover {
-  background-color: #f0f0f0;
+	background-color: #f0f0f0;
 }
 
 .container {
-  display: flex;
-  justify-content: space-around; 
-  align-items: flex-start; 
-  height: 75vh;
+	height: 90%;
+	display: flex;
+	justify-content: space-around; 
+	align-items: flex-start; 
 }
 
 .item {
-  width: 30%;
-  height: 100%;
-  background-color: white;
-  padding: 20px;
-  border: 1px solid #EDEDED;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
+	width: 30%;
+	height: 100%;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #EDEDED;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.03);
 }
 
 .item-header {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+    padding-bottom: 10px;
 }
 
 .item-content {
-  height: 100%;
+	height: 95%;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.order-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    border-bottom: 1px solid #EDEDED;
+    padding: 10px 0;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item-number {
+	font-size: 16px;
+}
+
+.bot-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    border-bottom: 1px solid #EDEDED;
+    padding: 10px 0;
+}
+
+.bot-number {       
+    font-size: 16px;
+}
+
+.bot-status {
+    font-size: 14px;
 }
